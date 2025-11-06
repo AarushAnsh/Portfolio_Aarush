@@ -62,11 +62,11 @@ const Navbar = ({ hidden = false }) => {
               </AnchorLink>{menu==='services' ? (<img src={underline}/>) :(<></> )}
            </li>
 
-           <li>
+           {/* <li>
               <AnchorLink className='anchor-link' href='#work'>
                 <p onClick={()=>{setMenu("work")}}>Portfolio</p>
               </AnchorLink>{menu==='work' ? (<img src={underline}/>) :(<></> )}
-           </li>
+           </li> */}
 
            <li>
               <AnchorLink className='anchor-link' href="#contact">

@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     gap: 80px;
-    margin: 0px 170px 80px 170px;
-    padding-top: 100px;
+    margin: 0px clamp(24px, 8vw, 170px) 80px clamp(24px, 8vw, 170px);
+    padding-top: clamp(60px, 8vw, 100px);
     scroll-margin-top: var(--navbar-height);
     position: relative;
     z-index: 0;
@@ -18,7 +18,7 @@
 
 .about-title h1 {
     padding: 0px 30px;
-    font-size: 80px;
+    font-size: clamp(36px, 6vw, 80px);
     font-weight: 600;
 }
 
@@ -31,7 +31,7 @@
 
 .about-sections {
     display: flex;
-    gap: 80px;
+    gap: clamp(32px, 6vw, 80px);
 }
 
 .about-left {
@@ -42,8 +42,8 @@
 
 /* ✅ Profile Image Styling (Hero jaisa) */
 .about-left img {
-    width: 280px;
-    height: 280px;
+    width: clamp(200px, 25vw, 280px);
+    height: clamp(200px, 25vw, 280px);
     object-fit: cover;
     border-radius: 50%;             /* round profile */
     border: 4px solid #fff;         /* white border */
@@ -60,14 +60,14 @@
 .about-right {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: clamp(32px, 6vw, 80px);
 }
 
 .about-para {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 24px;
+    font-size: clamp(16px, 2.4vw, 24px);
     font-weight: 500;
 }
 
@@ -86,7 +86,7 @@
 
 .about-skill p {
     min-width: 150px;
-    font-size: 24px;
+    font-size: clamp(16px, 2.4vw, 24px);
     font-weight: 500;
 }
 
@@ -114,7 +114,7 @@
 }
 
 .about-achievement h1 {
-    font-size: 60px;
+    font-size: clamp(32px, 5vw, 60px);
     font-weight: 700;
     background: linear-gradient(270deg, #DF8908 50.41%, #B415FF 90.25%);
     background-clip: text;
@@ -123,7 +123,7 @@
 }
 
 .about-achievement p {
-    font-size: 22px;
+    font-size: clamp(14px, 2.2vw, 22px);
     font-weight: 500;
 }
 
@@ -141,15 +141,15 @@
 /* 📱 Responsive Design */
 @media(max-width: 786px) {
     .about {
-        gap: 80px;
-        margin: 0px 70px 50px 70px;
+        gap: 60px;
+        margin: 0px 24px 50px 24px;
         padding-top: 60px;
         align-items: start;
         scroll-margin-top: var(--navbar-height);
     }
 
     .about-title h1 {
-        font-size: 50px;
+        font-size: 42px;
         padding: 0;
     }
 
@@ -185,7 +185,7 @@
     }
 
     .about-skill p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .about-skill hr {

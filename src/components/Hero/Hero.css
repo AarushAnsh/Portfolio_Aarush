@@ -16,8 +16,8 @@
 /* Profile Image Styling */
 .hero img {
     margin-top: 0;
-    width: 280px;
-    height: 280px;
+    width: clamp(180px, 25vw, 280px);
+    height: clamp(180px, 25vw, 280px);
     object-fit: cover;           /* image crop ho kar fit ho jaye */
     border-radius: 50%;          /* round profile picture */
     border: 4px solid #fff;      /* white border around image */
@@ -34,9 +34,8 @@
 
 .hero h1 {
     text-align: center;
-    width: 70%;
-    max-width: 900px;
-    font-size: 60px;
+    width: min(90%, 900px);
+    font-size: clamp(32px, 6vw, 60px);
     font-weight: 600;
     margin: 20px 0;
     padding: 0;
@@ -51,11 +50,10 @@
 }
 
 .hero p {
-    width: 50%;
-    max-width: 700px;
+    width: min(90%, 700px);
     text-align: center;
-    font-size: 24px;
-    line-height: 40px;
+    font-size: clamp(14px, 2.2vw, 24px);
+    line-height: clamp(22px, 4.5vw, 40px);
     margin: 10px 0 30px 0;
     flex-shrink: 0;
 }
@@ -75,7 +73,7 @@
 }
 
 .hero-connect {
-    padding: 20px 30px;
+    padding: clamp(14px, 2vw, 20px) clamp(22px, 3vw, 30px);
     border-radius: 50px;
     background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
     cursor: pointer;
@@ -91,7 +89,7 @@
 }
 
 .hero-resume {
-    padding: 20px 40px;
+    padding: clamp(14px, 2vw, 20px) clamp(28px, 3.5vw, 40px);
     border-radius: 50px;
     border: 2px solid #fff;
     cursor: pointer;
@@ -124,7 +122,7 @@
     border-radius: 15px;
     padding: 6px;
     min-width: 240px;
-    max-width: 280px;
+    max-width: 320px;
     z-index: 1001;
     box-shadow: 0 8px 25px rgba(180, 21, 255, 0.4);
     animation: fadeIn 0.3s ease;
@@ -132,7 +130,7 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    max-height: 200px;
+    max-height: 220px;
     overflow: visible;
 }
 
@@ -172,6 +170,13 @@
     transform: scale(1.02);
 }
 
+/* Tablet */
+@media (max-width: 992px) {
+    .hero h1 { font-size: clamp(32px, 7vw, 48px); }
+    .hero p { width: min(92%, 720px); }
+}
+
+/* Mobile */
 @media(max-width: 786px) {
     .hero {
         min-height: auto;
@@ -212,7 +217,7 @@
         padding: 15px 25px;
         border-radius: 40px;
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
         text-align: center;
     }
 
@@ -220,7 +225,7 @@
         padding: 15px 35px;
         border-radius: 40px;
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
     }
 
     .hero-resume-container {
@@ -231,7 +236,7 @@
 
     .hero-resume-options {
         min-width: 200px;
-        max-width: 260px;
+        max-width: 280px;
         left: 50%;
         transform: translateX(-50%);
         padding: 6px;
@@ -245,4 +250,12 @@
         margin: 0 auto;
         border-radius: 40px;
     }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+    .hero img { width: 160px; height: 160px; }
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 14px; line-height: 24px; }
+    .hero-resume, .hero-connect { padding: 12px 22px; }
 }
